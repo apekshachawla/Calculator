@@ -18,6 +18,19 @@
     </dependencies>
     <build>
         <plugins>
+        	<plugin>
+			<!-- Build an executable JAR -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>3.2.0</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>com.calculator.Calculator</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -32,11 +45,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
             </plugin>
-            <plugin>		
-            <groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<version>3.2.0</version>
-		</plugin>
         </plugins>
     </build>
 
